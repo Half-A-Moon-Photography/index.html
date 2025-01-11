@@ -16,7 +16,7 @@
             position: relative;
             text-align: center;
             color: #ffffff;
-            background: url('photos/banner.jpg') no-repeat center center/cover; /* Hero banner image */
+            background: url('photos/title-banner.jpg') no-repeat center center/cover; /* Hero banner image */
             height: 60vh;
         }
         header::after {
@@ -28,18 +28,11 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
         }
-        header h1 {
-            position: relative;
-            font-size: 4rem;
-            margin: 0;
-            padding-top: 20%;
-            z-index: 1;
-        }
-        header p {
-            position: relative;
-            font-size: 1.5rem;
-            font-style: italic;
-            z-index: 1;
+        /* Remove text elements and add title image */
+        header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         nav {
             display: flex;
@@ -116,12 +109,19 @@
         .social-icons a:hover {
             color: #FFD700;
         }
+        /* Styling for icons */
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Half A Moon Photography</h1>
-        <p>Exploring landscapes, capturing moments</p>
+        <!-- Title Image Instead of Text -->
+        <img src="photos/title-banner.jpg" alt="Half A Moon Photography">
     </header>
     <nav>
         <a href="#portfolio">Portfolio</a>
@@ -144,15 +144,23 @@
         </section>
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: bluesoftheforest@gmail.com</p>
-            <p>Instagram: <a href="https://instagram.com/half_a_moon_photography/" target="_blank">@half_a_moon_photography</a></p>
+            <p>Email: <a href="mailto:bluesoftheforest@gmail.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Google_Gmail_logo_2013.svg" alt="Gmail Logo"> bluesoftheforest@gmail.com</a>
+            </p>
+            <p>Instagram: <a href="https://instagram.com/half_a_moon_photography/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">@half_a_moon_photography</a>
+            </p>
         </section>
     </main>
     <footer>
         <p>© 2025 Half A Moon Photography. All rights reserved.</p>
         <div class="social-icons">
-            <a href="https://instagram.com/half_a_moon_photography/" target="_blank">Instagram</a>
-            <a href="mailto:bluesoftheforest@gmail.com">Email</a>
+            <a href="https://instagram.com/half_a_moon_photography/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">Instagram
+            </a>
+            <a href="mailto:bluesoftheforest@gmail.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Google_Gmail_logo_2013.svg" alt="Gmail Logo">Email
+            </a>
         </div>
     </footer>
     <!-- Lightbox Modals -->
